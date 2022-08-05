@@ -1,0 +1,15 @@
+/home/qqs/dev/Interpreter/pristine/bin/Debug/net6.0/pristine
+/home/qqs/dev/Interpreter/pristine/bin/Debug/net6.0/pristine.deps.json
+/home/qqs/dev/Interpreter/pristine/bin/Debug/net6.0/pristine.runtimeconfig.json
+/home/qqs/dev/Interpreter/pristine/bin/Debug/net6.0/pristine.dll
+/home/qqs/dev/Interpreter/pristine/bin/Debug/net6.0/pristine.pdb
+/home/qqs/dev/Interpreter/pristine/obj/Debug/net6.0/pristine.csproj.AssemblyReference.cache
+/home/qqs/dev/Interpreter/pristine/obj/Debug/net6.0/pristine.GeneratedMSBuildEditorConfig.editorconfig
+/home/qqs/dev/Interpreter/pristine/obj/Debug/net6.0/pristine.AssemblyInfoInputs.cache
+/home/qqs/dev/Interpreter/pristine/obj/Debug/net6.0/pristine.AssemblyInfo.cs
+/home/qqs/dev/Interpreter/pristine/obj/Debug/net6.0/pristine.csproj.CoreCompileInputs.cache
+/home/qqs/dev/Interpreter/pristine/obj/Debug/net6.0/pristine.dll
+/home/qqs/dev/Interpreter/pristine/obj/Debug/net6.0/refint/pristine.dll
+/home/qqs/dev/Interpreter/pristine/obj/Debug/net6.0/pristine.pdb
+/home/qqs/dev/Interpreter/pristine/obj/Debug/net6.0/pristine.genruntimeconfig.cache
+/home/qqs/dev/Interpreter/pristine/obj/Debug/net6.0/ref/pristine.dll

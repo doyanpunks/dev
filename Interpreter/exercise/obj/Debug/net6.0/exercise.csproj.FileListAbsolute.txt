@@ -1,0 +1,15 @@
+/home/qqs/dev/Interpreter/exercise/bin/Debug/net6.0/exercise
+/home/qqs/dev/Interpreter/exercise/bin/Debug/net6.0/exercise.deps.json
+/home/qqs/dev/Interpreter/exercise/bin/Debug/net6.0/exercise.runtimeconfig.json
+/home/qqs/dev/Interpreter/exercise/bin/Debug/net6.0/exercise.dll
+/home/qqs/dev/Interpreter/exercise/bin/Debug/net6.0/exercise.pdb
+/home/qqs/dev/Interpreter/exercise/obj/Debug/net6.0/exercise.csproj.AssemblyReference.cache
+/home/qqs/dev/Interpreter/exercise/obj/Debug/net6.0/exercise.GeneratedMSBuildEditorConfig.editorconfig
+/home/qqs/dev/Interpreter/exercise/obj/Debug/net6.0/exercise.AssemblyInfoInputs.cache
+/home/qqs/dev/Interpreter/exercise/obj/Debug/net6.0/exercise.AssemblyInfo.cs
+/home/qqs/dev/Interpreter/exercise/obj/Debug/net6.0/exercise.csproj.CoreCompileInputs.cache
+/home/qqs/dev/Interpreter/exercise/obj/Debug/net6.0/exercise.dll
+/home/qqs/dev/Interpreter/exercise/obj/Debug/net6.0/refint/exercise.dll
+/home/qqs/dev/Interpreter/exercise/obj/Debug/net6.0/exercise.pdb
+/home/qqs/dev/Interpreter/exercise/obj/Debug/net6.0/exercise.genruntimeconfig.cache
+/home/qqs/dev/Interpreter/exercise/obj/Debug/net6.0/ref/exercise.dll

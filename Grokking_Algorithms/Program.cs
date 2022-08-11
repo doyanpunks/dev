@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 
 namespace Algorithms
@@ -24,6 +25,11 @@ class Algorithms
         {
             System.Console.WriteLine(newarr[i]);
         }
+
+        System.Console.WriteLine("Array sum: ");
+
+        LinkedList<int> llist = new LinkedList<int> (arr);
+        System.Console.WriteLine(Count(llist));
    }
   // it works!
     public static int FindSmallest(int[] arr)
@@ -40,9 +46,9 @@ class Algorithms
         }
         return smallest_index;
     }
-
     // it works(I guess)
     public static int[] SelectionSort(int[] arr)
+    
     {
         int[] newArr = new  int[arr.Length];
         for (int i = 0; i < newArr.Length; i++)
@@ -52,6 +58,24 @@ class Algorithms
             arr = arr.Where(val => val != arr[FindSmallest(arr)]).ToArray(); 
         }
         return newArr;
-    } 
+    }
+
+    public static int Count(LinkedList<int> arr)
+    {
+        int count = 0;
+        if(arr == null)
+        {
+            System.Console.WriteLine("List is empty");
+            return 0;
+        }
+        else
+        {
+            arr.RemoveLast();
+            Count(arr) + 1;
+            count++;
+        }
+    }
+    
+     
 }
 }

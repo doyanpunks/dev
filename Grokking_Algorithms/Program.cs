@@ -28,7 +28,9 @@ namespace Algorithms
 
             System.Console.WriteLine("Array sum: ");
 
+            //LinkedList<int> llist = new LinkedList<int>(arr);
             LinkedList<int> llist = new LinkedList<int>(arr);
+
             
             Console.WriteLine("llist length: ");
             System.Console.WriteLine(Count(llist));
@@ -64,29 +66,21 @@ namespace Algorithms
 
         public static int Count(LinkedList<int> arr)
         {
-            int count = 0;
+            int count = 1;
+            LinkedList<int> first_node = arr.First<int>;
             if (arr == null)
             {
                 System.Console.WriteLine("List is empty");
                 return 0;
             }
             else
-            {
-                while (arr.First != null)
-                {
-                    arr.RemoveLast();
-                    count++;
-                    Count(arr);
-                }
-                
-                
-                //Count(arr);
+            {   
+                while (arr.Next && arr != first_node) {
+                count++;
+                arr = arr.Next;
+}
             }
-            return count;
+            
         }
-
-
     }
-
-
 }

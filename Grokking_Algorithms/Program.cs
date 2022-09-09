@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace Algorithms
@@ -9,10 +10,12 @@ namespace Algorithms
         static void Main(string[] args)
         {
             int[] arr = { 5, 3, 7, 9, 2, 1 };
+            //var test = arr.Skip(5);
+            //var test = arr.Take(5);
             int smallest = FindSmallest(arr);
-            System.Console.WriteLine($"Index of the smallest number in the array is: {smallest}");
 
-            System.Console.WriteLine("Before SelectionSort()");
+            Console.WriteLine($"Index of the smallest number in the array is: {smallest}");
+            Console.WriteLine("Before SelectionSort()");
             for (int i = 0; i < arr.Length; i++)
             {
                 System.Console.WriteLine(arr[i]);
@@ -26,14 +29,15 @@ namespace Algorithms
                 System.Console.WriteLine(newarr[i]);
             }
 
-            System.Console.WriteLine("Array sum: ");
+            Console.WriteLine($"Array sum: {Sum(arr)}");
+            Console.WriteLine($"llist length: {Count(arr)}");
+            Console.WriteLine($"Max from list: {Max(arr)}");
 
-            //LinkedList<int> llist = new LinkedList<int>(arr);
-            LinkedList<int> llist = new LinkedList<int>(arr);
+            //foreach (var item in test)
+            //{
+            //    Console.WriteLine(item);
+            //}
 
-            
-            Console.WriteLine("llist length: ");
-            System.Console.WriteLine(Count(llist));
         }
         // it works!
         public static int FindSmallest(int[] arr)
@@ -63,24 +67,50 @@ namespace Algorithms
             }
             return newArr;
         }
-
-        public static int Count(LinkedList<int> arr)
+        public static int Sum(IEnumerable<int> list)
         {
-            int count = 1;
-            LinkedList<int> first_node = arr.First<int>;
-            if (arr == null)
+            if (!list.Any())
             {
-                System.Console.WriteLine("List is empty");
                 return 0;
             }
             else
-            {   
-                while (arr.Next && arr != first_node) {
-                count++;
-                arr = arr.Next;
-}
+            {
+                // For debugging
+                //var first = list.Take(1).First();
+                //var second = Sum(list.Skip(1));
+
+                return list.Take(1).First() + Sum(list.Skip(1));
             }
-            
+        }
+        public static int Count(IEnumerable<int> list)
+        {
+            if (!list.Any())
+            {
+                return 0;
+                Console.WriteLine("List is empty");
+            }
+            else
+            {
+                return 1 + Count(list.Skip(1));
+            }
+        }
+        public static int Max(IEnumerable<int> list)
+        {
+            if (!list.Any())
+            {
+                return 0;
+                Console.WriteLine("List is empty");
+            }
+            if (Count(list) == 1)
+            {
+                return list.First();
+            }
+            else
+            {
+                var sub_max = Max(list.Skip(1));
+                return list.First() > sub_max ? list.First() : sub_max;
+                
+            }
         }
     }
 }

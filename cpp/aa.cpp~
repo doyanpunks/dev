@@ -1,0 +1,13 @@
+#include <iostream>
+
+int main(void)
+{
+    int count = 10;
+    while(count != 0)
+    {
+        std::cout << "test" << std::endl;        
+        count--;
+    }
+
+    return 0;
+}

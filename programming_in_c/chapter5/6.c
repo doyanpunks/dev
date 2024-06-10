@@ -11,7 +11,8 @@
 
 int main()
 {
-   int number;
+   int number, reversed_number, right_digit, trailing_zeros;
+
    printf("Enter the number: \n");
    scanf("%d", &number);
 
@@ -19,7 +20,25 @@ int main()
    {
       printf("zero");
    }
-   
+
+   // extract and count trailing 0's if any
+   trailing_zeros = 0;
+   while(number != 0 && (number % 10) == 0)
+   {
+      ++trailing_zeros;
+      number /= 10;
+   }
+
+   // reverse the remaining integer
+   reversed_number = 0;
+   while (number > 0)
+   {
+      right_digit = number % 10;
+      reversed_number = reversed_number * 10 + right_digit;
+      number /= 10;
+
+   }
+     
 
     int number_to_convert;
     switch (number_to_convert)

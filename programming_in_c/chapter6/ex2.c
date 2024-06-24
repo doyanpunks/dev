@@ -23,7 +23,7 @@ int main()
 
     for (int i = 0; i <= 20; ++i)
     {
-        scanf("%i", &response);
+        scanf("%llu", &response);
         if (response == 999)
         {
             printf("Bad response: %llu\n", response);
@@ -39,7 +39,7 @@ int main()
 
         for (int i = 1; i <= 10; ++i)
         {
-            printf("%4i%14i\n", i, ratingCounters[i]);
+            printf("%14lli\n", i, ratingCounters[i]);
         }
         
     }

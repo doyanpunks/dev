@@ -1,25 +1,26 @@
-class User:
-    def __init__(self, first_name, last_name, uid, passwd):
-        """Initialize variables"""
-        self.first_name = first_name
-        self.last_name = last_name
-        self.uid = uid
-        self.passwd = passwd
-        self.login_attempts = 0
-   
-    def describe_user(self):
-        print(f"User {self.first_name} {self.last_name} with UID: {self.uid} has password: {self.passwd}")
+class Restaurant:
+    def __init__(self, restaurant_name, cuisine_type):
+        """Initializing variables"""
+        self.restaurant_name = restaurant_name
+        self.cuisine_type = cuisine_type
         
-    def greet_user(self):
-        print(f"Hello {self.first_name} {self.last_name}! Nice to meet you!")
-    
-    def increment_login_attempts(self):
-        self.login_attempts += 1
+    def describe_restaurant(self):
+        print(f"Name of the restaurant is {self.restaurant_name}")
+        print(f"Cuisine is {self.cuisine_type}")
+        
+    def open_restaurant(self):
+        print("Restaurant is open")
 
-    def reset_login_attempts(self):
-        self.login_attempts = 0
+class IceCreamStand(Restaurant):
+    def __init__(self, restaurant_name, cuisine_type):
+        super().__init__(restaurant_name, cuisine_type)
+        self.flavors = ["phistachio", "vanile", "banana"]
 
-class Admin(User):
-    def __init__(self, first_name, last_name, uid, passwd):
-        super().__init__(first_name, last_name, uid, passwd)
-        self.privileges = ["can add post", "can delete post", "can ban user"]
+    def show_flavors(self):
+        for i in range(len(self.flavors)):
+            print(self.flavors[i])
+
+ice_cream_stand = IceCreamStand("Gelato", "Ice Cream")
+ice_cream_stand.show_flavors()
+ice_cream_stand.describe_restaurant()
+ice_cream_stand.open_restaurant()

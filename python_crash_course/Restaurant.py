@@ -20,7 +20,9 @@ class IceCreamStand(Restaurant):
         for i in range(len(self.flavors)):
             print(self.flavors[i])
 
+"""
 ice_cream_stand = IceCreamStand("Gelato", "Ice Cream")
 ice_cream_stand.show_flavors()
 ice_cream_stand.describe_restaurant()
 ice_cream_stand.open_restaurant()
+"""

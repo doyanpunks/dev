@@ -2,14 +2,17 @@ from pathlib import Path
 from word_count import count_words
 
 def count(word, filename):
-    count = 0
-    for i in filename:
-        if i == word:
-            count += 1
-    return count
+    try:
+        with open(filename, encoding='utf-8') as f:
+            contents = f.read()
+    except FileNotFoundError:
+        pass
+    else:
+         count_words = contents.lower().count(word)
 
-filenames = ['cats.txt', 'dogs.txt']
-for filename in filenames:
-    path = Path(filename)
-    count_words(path)
-    print(count('Neck Snap'), path)
+         msg = f"'{word}' appears in {filename} about {count_words} times."
+         print(msg)
+    
+
+filename = 'alice.txt'
+count('the', filename)

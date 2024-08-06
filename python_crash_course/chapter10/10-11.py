@@ -1,3 +1,5 @@
+"""Includes Exercise 10-12"""
+
 from pathlib import Path
 import json
 
@@ -16,13 +18,13 @@ def get_new_number(path):
     return fav_number
 
 def print_number():
-    path = Path('favorite_number.txt')
+    path = Path('favorite_number.json')
     fav_number = get_stored_number(path)
     if fav_number:
-        print("Your favorite number is: {fav_number}!")
+        print(f"Your favorite number is: {fav_number}!")
     else:
         get_new_number(path)
         fav_number = get_stored_number(path)
-        print("Your new favorite number is: {fav_number}!")
+        print(f"Your new favorite number is: {fav_number}!")
 
 print_number()
